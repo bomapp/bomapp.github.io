@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BOM Support</title>
+<title>BOM</title>
 <link rel="icon" href="/icon.png">
-<meta property="og:title" content="BOM Support">
+<meta property="og:title" content="BOM">
 <meta property="og:description" content="Send a friend a kind word.">
 <meta property="og:image" content="https://bomapp.github.io/og-image.png">
 <style>
@@ -35,19 +35,17 @@ button { font:inherit; font-weight:600; color:#fff; background:var(--accent); bo
 <source srcset="/bom-wordmark-white.svg" media="(prefers-color-scheme: dark)">
 <img src="/bom-wordmark-blue.svg" alt="BOM"></picture></a></header>
 
-<h1>Support · 支援</h1>
-<div class="card">
-<p><strong>Contact us · 聯絡我們</strong><br><a href="mailto:bomapphelp@gmail.com">bomapphelp@gmail.com</a></p>
-<p class="muted">We reply within a few days. Please include your anonymous ID (Settings in the app) if your question is about your data.<br>
-我們會在數日內回覆。如查詢與你的資料有關，請附上你的匿名 ID（可於應用程式「設定」中找到）。</p>
-</div>
-<h3>Delete my data · 刪除我的資料</h3>
-<p>In the app: Settings → Delete my data. It removes everything straight away.<br>
-<span lang="zh-Hant">在應用程式內：設定 → 刪除我的資料，即可立即刪除所有資料。</span></p>
-<h3>Report a BOM · 舉報</h3>
-<p>Open the BOM and tap Report. You can also block the sender without learning who they are.<br>
-<span lang="zh-Hant">打開該 BOM 並按「舉報」。你亦可以封鎖寄件人，而不會知道對方是誰。</span></p>
-<h3>Privacy · 私隱</h3>
-<p><a href="/privacy.html">Privacy Policy · 私隱政策</a> · <a href="/terms.html">Terms of Use · 使用條款</a></p>
+<h1>A friend sent you a BOM<br><span lang="zh-Hant">朋友送了一個 BOM 給你</span></h1>
+<div class="card"><p class="code" id="code"></p>
+<button id="copy" type="button">Copy code · 複製代碼</button>
+<script>
+const c = decodeURIComponent(location.hash.slice(1)).toUpperCase();
+document.getElementById('code').textContent = c;
+document.getElementById('copy').onclick = () => navigator.clipboard.writeText(c)
+  .then(() => document.getElementById('copy').textContent = 'Copied · 已複製');
+</script></div>
+<p>Get BOM, tap <strong>Open a BOM</strong> and enter this code.</p>
+<p lang="zh-Hant">下載 BOM 後，按「打開 BOM」並輸入以上代碼。</p>
+<p class="muted">BOM is coming soon to the App Store and Google Play · BOM 即將於 App Store 及 Google Play 推出</p>
 </main></body>
 </html>
