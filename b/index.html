@@ -28,6 +28,26 @@ nav a { margin-right:16px; }
 .card { background:var(--card); border-radius:16px; padding:16px 20px; margin:16px 0; }
 .code { font:700 34px/1.2 ui-monospace, SFMono-Regular, monospace; letter-spacing:2px; margin:8px 0 12px; }
 button { font:inherit; font-weight:600; color:#fff; background:var(--accent); border:0; border-radius:999px; padding:10px 22px; }
+.zh { color:var(--muted); }
+.steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin:16px 0; }
+.step { background:var(--card); border-radius:20px; padding:18px; }
+.step svg, .tile svg { width:56px; height:56px; display:block; }
+.step h3 { margin:10px 0 4px; }
+.step p { margin:0; font-size:15px; }
+.tiles { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr)); gap:10px; margin:16px 0; }
+.tile { border-radius:20px; padding:14px; color:#1c3a5c; font-weight:700; font-size:15px; line-height:1.3; }
+.tile span { display:block; font-weight:500; font-size:14px; opacity:.75; }
+.friends { display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; margin:16px 0;
+           background:linear-gradient(#2985d1, #5ca6e3); border-radius:24px; padding:16px 12px; }
+.friend { text-align:center; color:#fff; font-weight:700; font-size:14px; line-height:1.3; }
+.badges { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0; }
+.badge { width:72px; height:72px; border-radius:18px; display:flex; align-items:center; justify-content:center;
+         background:#d9edff; color:#2985d1; font:700 26px/1 ui-rounded, sans-serif; }
+.badge svg { width:40px; height:40px; }
+.badge.locked { background:var(--card); color:var(--muted); }
+.friend img { width:100%; max-width:84px; height:auto; display:block; margin:0 auto 4px; }
+.friend span { display:block; font-weight:500; opacity:.9; }
+ul.ticks { padding-left:20px; } ul.ticks li { margin:6px 0; }
 </style>
 </head>
 <body><main>
