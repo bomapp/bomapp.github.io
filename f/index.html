@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BOM</title>
 <link rel="icon" href="/icon.png">
+
 <meta property="og:title" content="BOM">
 <meta property="og:description" content="Send a friend a kind word.">
 <meta property="og:image" content="https://bomapp.github.io/og-image.png">
@@ -29,6 +30,7 @@ nav a { margin-right:16px; }
 .code { font:700 34px/1.2 ui-monospace, SFMono-Regular, monospace; letter-spacing:2px; margin:8px 0 12px; }
 button { font:inherit; font-weight:600; color:#fff; background:var(--accent); border:0; border-radius:999px; padding:10px 22px; }
 .zh { color:var(--muted); }
+.lang { text-align:right; margin:0 0 8px; font-size:15px; }
 .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin:16px 0; }
 .step { background:var(--card); border-radius:20px; padding:18px; }
 .step svg, .tile svg { width:56px; height:56px; display:block; }
@@ -51,22 +53,31 @@ ul.ticks { padding-left:20px; } ul.ticks li { margin:6px 0; }
 </style>
 </head>
 <body><main>
+
 <header><a href="/"><picture>
 <source srcset="/bom-wordmark-white.svg" media="(prefers-color-scheme: dark)">
 <img src="/bom-wordmark-blue.svg" alt="BOM"></picture></a></header>
 
-<h1>A friend invited you to BOM<br><span lang="zh-Hant">朋友邀請你加入 BOM</span></h1>
+<p class="lang"><a class="switch" data-lang="en" href="?zh">中文</a><a class="switch" data-lang="zh" href="?en" hidden>English</a></p>
+<h1 data-lang="en">A friend invited you to BOM</h1><h1 data-lang="zh" lang="zh-Hant" hidden>朋友邀請你加入 BOM</h1>
 <div class="card"><p class="code" id="code"></p>
-<button id="copy" type="button">Copy code · 複製代碼</button>
+<button id="copy" type="button"></button>
 <script>
+document.addEventListener('DOMContentLoaded', () => {
 const c = decodeURIComponent(location.hash.slice(1)).toUpperCase();
 document.getElementById('code').textContent = c;
-document.getElementById('copy').onclick = () => navigator.clipboard.writeText(c)
-  .then(() => document.getElementById('copy').textContent = 'Copied · 已複製');
+// One language at a time: the phone's, unless the reader switches.
+const zh = /^zh/i.test(navigator.language) ? !location.search.includes('en') : location.search.includes('zh');
+document.querySelectorAll('[data-lang]').forEach(e => e.hidden = (e.dataset.lang === 'zh') !== zh);
+const copy = document.getElementById('copy');
+copy.textContent = zh ? '複製代碼' : 'Copy code';
+copy.onclick = () => navigator.clipboard.writeText(c).then(() => copy.textContent = zh ? '已複製' : 'Copied');
+document.querySelectorAll('.switch').forEach(a => a.href = (zh ? '?en' : '?zh') + location.hash);
+});
 </script></div>
-<p>Get BOM, tap <strong>Open a BOM</strong> and enter this code to become BOM friends.</p>
-<p lang="zh-Hant">下載 BOM 後，按「打開 BOM」並輸入以上代碼，即可成為 BOM 朋友。</p>
-<p class="muted">BOM is coming soon to the App Store and Google Play · BOM 即將於 App Store 及 Google Play 推出</p>
-<footer class="muted" style="margin-top:48px">© 2026 Ho Chung Au and Chun Yin Au. All rights reserved.</footer>
+<p data-lang="en">Get BOM, tap <strong>Open a BOM</strong> and enter this code to become BOM friends.</p><p data-lang="zh" lang="zh-Hant" hidden>下載 BOM 後，按「打開 BOM」並輸入以上代碼，即可成為 BOM 朋友。</p>
+<p class="muted" data-lang="en">BOM is coming soon to the App Store and Google Play.</p>
+<p class="muted" data-lang="zh" lang="zh-Hant" hidden>BOM 即將於 App Store 及 Google Play 推出。</p>
+<footer class="muted" style="margin-top:48px">© 2026 Ho Chung Au. All rights reserved.</footer>
 </main></body>
 </html>

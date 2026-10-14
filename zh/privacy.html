@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOM 私隱政策</title>
+<link rel="icon" href="/icon.png">
+<link rel="alternate" hreflang="en" href="/privacy.html">
+<meta property="og:title" content="BOM 私隱政策">
+<meta property="og:description" content="用一句好話讚賞朋友。">
+<meta property="og:image" content="https://bomapp.github.io/og-image.png">
+<style>
+:root { --bg:#fff; --fg:#1c1c1e; --muted:#6e6e73; --accent:#f39200; --card:#f5f5f7; }
+@media (prefers-color-scheme: dark) { :root { --bg:#000; --fg:#f5f5f7; --muted:#a1a1a6; --card:#1c1c1e; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:17px/1.6 ui-rounded, -apple-system, "PingFang HK", "Noto Sans HK", sans-serif; }
+main { max-width:680px; margin:0 auto; padding:32px 16px 64px; }
+a { color:var(--accent); }
+header { margin-bottom:24px; }
+header img { height:40px; width:auto; display:block; }
+.hero { position:relative; overflow:hidden; border-radius:24px; padding:72px 24px 64px; margin-bottom:32px;
+        text-align:center; background:linear-gradient(#2985d1, #4fb8ed); }
+.hero .wordmark { width:min(320px, 70%); position:relative; }
+.hero .cloud { position:absolute; filter:drop-shadow(6px 7px 0 rgba(14,76,120,.22)); }
+h2 { margin-top:40px; } h3 { margin:28px 0 4px; font-size:18px; }
+.muted { color:var(--muted); font-size:15px; }
+nav a { margin-right:16px; }
+.card { background:var(--card); border-radius:16px; padding:16px 20px; margin:16px 0; }
+.code { font:700 34px/1.2 ui-monospace, SFMono-Regular, monospace; letter-spacing:2px; margin:8px 0 12px; }
+button { font:inherit; font-weight:600; color:#fff; background:var(--accent); border:0; border-radius:999px; padding:10px 22px; }
+.zh { color:var(--muted); }
+.lang { text-align:right; margin:0 0 8px; font-size:15px; }
+.steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin:16px 0; }
+.step { background:var(--card); border-radius:20px; padding:18px; }
+.step svg, .tile svg { width:56px; height:56px; display:block; }
+.step h3 { margin:10px 0 4px; }
+.step p { margin:0; font-size:15px; }
+.tiles { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr)); gap:10px; margin:16px 0; }
+.tile { border-radius:20px; padding:14px; color:#1c3a5c; font-weight:700; font-size:15px; line-height:1.3; }
+.tile span { display:block; font-weight:500; font-size:14px; opacity:.75; }
+.friends { display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; margin:16px 0;
+           background:linear-gradient(#2985d1, #5ca6e3); border-radius:24px; padding:16px 12px; }
+.friend { text-align:center; color:#fff; font-weight:700; font-size:14px; line-height:1.3; }
+.badges { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0; }
+.badge { width:72px; height:72px; border-radius:18px; display:flex; align-items:center; justify-content:center;
+         background:#d9edff; color:#2985d1; font:700 26px/1 ui-rounded, sans-serif; }
+.badge svg { width:40px; height:40px; }
+.badge.locked { background:var(--card); color:var(--muted); }
+.friend img { width:100%; max-width:84px; height:auto; display:block; margin:0 auto 4px; }
+.friend span { display:block; font-weight:500; opacity:.9; }
+ul.ticks { padding-left:20px; } ul.ticks li { margin:6px 0; }
+</style>
+</head>
+<body><main>
+<p class="lang"><a href="/privacy.html" hreflang="en">English</a></p>
+<header><a href="/"><picture>
+<source srcset="/bom-wordmark-white.svg" media="(prefers-color-scheme: dark)">
+<img src="/bom-wordmark-blue.svg" alt="BOM"></picture></a></header>
+<h1>私隱政策</h1>
+<section lang="zh-Hant" id="chinese"><p class="muted">最後更新：2026年10月14日</p>
+<h3>我們是誰</h3>
+<p>BOM 盡量少收集資料：不會收集你的電話號碼、通訊錄或你撰寫的訊息。我們唯一儲存的名字，是你自行選擇顯示的名稱（如有設定）。本政策適用於英國、香港、美國及台灣的用戶。中英文版本如有差異，以英文版本為準。</p>
+<p>BOM 是一個 iPhone 及 Android 應用程式，讓你以預先寫好的短句讚賞朋友——可以署名，亦可以匿名傳送給已使用 BOM 的朋友。BOM 在英國、香港、美國及台灣提供。</p>
+<p>BOM 由居於英國的 Ho Chung Au 營運，他是英國資料保護法例下你的資料的控制者，亦是香港《個人資料（私隱）條例》下的資料使用者。聯絡地址：<a href="mailto:bomapphelp@gmail.com">bomapphelp@gmail.com</a>。</p>
+<h3>我們收集的資料</h3>
+<p>打開 BOM 時，系統會以一個隨機的匿名 ID 為你登入。這個 ID 與你的電話號碼、電郵或 Apple ID 沒有任何關聯，除非你選用「帳戶備份」：屆時 Apple 會向 BOM 提供一個代表你 Apple ID 的隨機識別碼（不包括姓名或電郵），與你的帳戶一併保存，讓你換手機後可以取回帳戶。刪除資料時，該識別碼會一併刪除，並解除與 Apple 的連結。如你改用 Google 備份，Google 會向我們的登入服務（Firebase Authentication）提供你的 Google 帳戶 ID、名字、電郵地址及頭像連結；這些資料只會與你的帳戶一併保存，讓你可以取回帳戶，BOM 絕不會顯示或使用，刪除資料時亦會一併刪除。在 Android，如你使用 Android 的手機對手機轉移功能，BOM 在你手機上的資料（包括登入狀態）會一併轉移到新手機，讓你保留帳戶；這些資料不會包括在 Google 的雲端備份中。</p>
+<p>儲存於我們的伺服器：你的匿名 ID；你的顯示名稱（如有設定）；你自行分享的每個 BOM 是哪一句預寫訊息、其代碼、傳送時間及你的顯示名稱（如有）；你傳送給 BOM 朋友的每個 BOM 是哪一句訊息、朋友的匿名 ID 及時間（如你預約發送，亦包括送達時間）（匿名 BOM 只帶有一個隨機標籤，而不是你的 ID；與你的關聯存於一份私人紀錄，在應用程式內只有你能查看，我們兩人只會在處理舉報或法律要求時查看）；每個 BOM 是否已被開啟、道謝、略過或舉報及其時間；你與哪些人是 BOM 朋友，以及令你們成為朋友的那個 BOM 或 QR code；你製作的每個「加 BOM 朋友」QR code 的匿名 ID、顯示名稱（如有）及時間（有效 24 小時）；以及使用情況：首次及最後使用日期、使用過的日子、手機的地區設定（例如 HK 或 GB）、BOM 的語言及時區。如有人濫用 BOM，我們會把其匿名 ID 連同原因記錄在封禁名單內。</p>
+<p>為阻止非正版的應用程式使用我們的伺服器，Apple（App Attest）或 Google（Play Integrity）會向伺服器確認每個請求來自真正的 BOM 應用程式；我們只會收到該確認。</p>
+<p>存於你的手機，並在我們的伺服器保留一份備份（私人紀錄，在應用程式內只有你能查看，讓你重新安裝 BOM 或換手機後仍可保留）：你為收件人及 BOM 朋友輸入的暱稱，以及你封鎖的寄件人（只有其隨機標籤，不會知道對方是誰）。只存於你的手機：你已開啟的 BOM。</p>
+<p>當其中一方開啟另一方署名傳送的 BOM，或掃描另一方的 QR code，你們便成為 BOM 朋友。你的 BOM 朋友名單只有你自己可以查看。</p>
+<p>只在你的手機上處理、絕不儲存或傳送：你在「幫我揀」輸入的文字（由 Apple 的裝置端 AI 用來建議預寫句子），以及掃描 QR code 時的相機畫面。</p>
+<h3>我們不會收集的資料</h3>
+<p>你的電話號碼、電郵地址或真實姓名（除非你以真名作為顯示名稱，或按上文所述使用 Google 備份）；你的通訊錄；你撰寫的任何訊息（BOM 只有預先寫好的訊息，你唯一可以輸入的是顯示名稱，而系統會以冒犯性字詞名單加以檢查）；你的位置（只收集手機的地區設定，絕不使用 GPS）；你的相片或咪高峰（相機只會在你掃描朋友的 QR code 時使用）；廣告識別碼（BOM 沒有廣告、沒有第三方分析工具，亦不會跨應用程式追蹤你）。</p>
+<h3>使用目的</h3>
+<p>送達 BOM、顯示署名 BOM 的寄件人，以及讓你知道你的 BOM 是否已被開啟或道謝（英國法律依據：合約）；透過舉報、封鎖、名稱過濾及傳送上限防止濫用（正當利益）；以總數形式了解 BOM 在各市場的成效並比較香港與英國，例如傳送數量及回來使用的人數（正當利益）。</p>
+<p>我們不會為個別用戶建立檔案，亦絕不會出售、分享或把你的資料用於廣告或直接促銷。在香港，你的資料只會用於以上與收集目的直接相關的用途。</p>
+<h3>儲存地點</h3>
+<p>BOM 的資料儲存於 Google Firebase（Firestore 及 Firebase Authentication），由 Google 以資料處理者身份營運，位於 Google 的倫敦區域；所有用戶的資料均儲存於該處，即香港、美國及台灣用戶的資料儲存於其所在地以外。Google 或會按其自身的跨境保障措施，在英國以外處理有限的技術資料。我們每星期亦會把伺服器資料備份一份，存於我們在英國的電腦，最多保留 5 星期。除我們兩人（分別在英國及香港存取資料）外，沒有其他人會收到 BOM 的資料。</p>
+<h3>保留期限</h3>
+<p>BOM 紀錄自建立起保留 12 個月；你的 BOM 朋友名單及使用情況紀錄自你最後一次使用起保留 12 個月，其後會在下一個月內刪除。被舉報的 BOM 會保留同樣 12 個月以供處理，即使寄件人或舉報者刪除了資料亦然；被舉報的匿名 BOM 與寄件人的關聯亦會一併保留。封禁名單會在防止濫用所需期間保留，我們每年最少檢討一次。你的暱稱及封鎖紀錄的私人備份，自你最後一次使用起保留 12 個月。備份副本會在 5 星期內被取代。</p>
+<h3>匿名與安全</h3>
+<p>BOM 只供 18 歲或以上人士使用；如我們得知有 18 歲以下人士使用，可能會暫停其帳戶，並請其刪除資料。</p>
+<p>你自行分享的 BOM 不是匿名的：如你設定了顯示名稱，卡上會顯示該名稱，而且該 BOM 是經你自己的 WhatsApp 或通訊帳戶傳送的。傳送給 BOM 朋友的 BOM 可以是匿名的：它不帶有你的 ID，只有一個隨機標籤，讓收件人可以封鎖你而不會知道你是誰。除非法律要求，我們不會披露匿名 BOM 的寄件人。</p>
+<p>我們兩人每星期處理一次舉報，並會在 2 日內回覆有關濫用的電郵。處理舉報時，我們會查看被舉報的 BOM，如屬匿名 BOM 亦會查看寄件人；我們不會告訴任何人是誰舉報了他們，亦不會告訴舉報者寄件人是誰。如有人濫用 BOM，我們可以封禁其帳戶，使其不能再傳送 BOM、加 BOM 朋友或製作 QR code。封鎖會存於你的手機及你的私人備份，寄件人不會收到通知。顯示名稱會以多種語言的冒犯性字詞名單檢查；過濾無法做到完美，如看到帶有冒犯性名稱的卡，請加以舉報。</p>
+<h3>你的權利</h3>
+<p>香港（《個人資料（私隱）條例》）：你可以要求獲取你的個人資料複本（查閱資料要求）及要求改正；我們亦會應你的要求刪除資料。台灣（《個人資料保護法》）：你可以要求查詢、閱覽或製給複製本，補充或更正，停止蒐集、處理或利用，以及刪除你的資料；BOM 必須使用匿名 ID 才能運作。美國：無論你居於哪一州，你都可以要求查閱、更正或刪除你的資料。我們不會出售或分享個人資料，亦不會跨應用程式或網站追蹤你，因此「不追蹤」（Do Not Track）訊號不會改變任何處理。BOM 供成年人使用，並非以 13 歲以下兒童為對象。如某州法律要求 App Store 核實年齡（例如德州），BOM 只會使用你的 App Store 或 Google Play 帳戶提供的年齡範圍，而且只用於阻止 18 歲以下人士使用。英國（UK GDPR）：你可以要求獲取、改正、刪除、限制或反對使用你的資料，以及以可攜帶的格式獲取資料。</p>
+<p>最快的刪除方法是在應用程式內選擇「設定 → 個人資料 → 刪除我的資料」，即可立即刪除你傳送或收到的所有 BOM（被舉報的 BOM 除外，會按上文保留以供處理）、BOM 朋友、天使翼、使用紀錄、暱稱及封鎖名單的私人備份，以及 Apple 或 Google 帳戶備份。沒有應用程式的話，請看 bomapp.github.io/zh/delete.html。其他要求請電郵至 <a href="mailto:bomapphelp@gmail.com">bomapphelp@gmail.com</a>，並提供你的匿名 ID（可於「設定 → 個人資料」中找到）。我們會在一個月內回覆。</p>
+<p>如你不滿意我們處理你資料的方式，可以向香港個人資料私隱專員公署（<a href="https://pcpd.org.hk">pcpd.org.hk</a>）、英國資訊專員辦公室（<a href="https://ico.org.uk">ico.org.uk</a>），或台灣的個人資料保護主管機關投訴。</p>
+<h3>政策更改及聯絡</h3>
+<p>如我們修改本政策，會更新頁首的日期，並在更改生效前於應用程式內通知你。查詢：<a href="mailto:bomapphelp@gmail.com">bomapphelp@gmail.com</a>。</p>
+</section>
+<footer class="muted" style="margin-top:48px">© 2026 Ho Chung Au. All rights reserved.</footer>
+</main></body>
+</html>
